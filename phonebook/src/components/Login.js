@@ -34,7 +34,8 @@ const Login = ({onLogin}) => {
               <Form.Control type='password' id='password' placeholder='Enter password' />
             </Form.Group>
             <Form.Group>
-              <Button variant='primary' onChange={this.loginClicked.bind(this)}>Login</Button>
+              /*<Button variant='primary' onClick={loginClicked.bind(this)} onChange={loginClicked.bind(this)}>Login</Button>*/
+              <button className='btn btn-primary' onClick={loginClicked}>Login</button>
             </Form.Group>
           </Form>
         </Col>
