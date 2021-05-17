@@ -1,0 +1,9 @@
+.navContainer {
+  background-color: black;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.navContainer * {
+  color: white
+}
