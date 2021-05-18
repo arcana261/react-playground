@@ -1,32 +1,44 @@
 import {
-  Container,
   Row,
   Col,
-  Form,
-  Button
+  Container,
+  Toast
 } from 'react-bootstrap'
 
+import { useState } from 'react'
+
+import Login from './Login'
+
 const LoginPage = () => {
+  const [showError, setShowError] = useState(false)
+
+  const onLogin = async (username, password) => {
+    console.log('from login page', username, password)
+    setShowError(true)
+  }
+
   return (
     <Container>
-      <Row className='align-items-center h-100'>
-        <Col />
-        <Col xs='4'>
-          <Form>
-            <Form.Group>
-              <Form.Label>Username:</Form.Label>
-              <Form.Control type='email' placeholder='Enter username' />
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Password:</Form.Label>
-              <Form.Control type='password' placeholder='Enter password' />
-            </Form.Group>
-            <Form.Group>
-              <Button variant='primary'>Login</Button>
-            </Form.Group>
-          </Form>
+      <Row>
+        <Col>
+          <div style={{position: 'relative', minHeight: '200px'}}>
+            <div style={{position: 'absolute', top: 0, right: 0}}>
+              <Toast show={showError} onClose={() => setShowError(false)} delay={3000} autohide>
+                <Toast.Header>
+                  <small>Login</small>
+                </Toast.Header>
+                <Toast.Body>
+                  Some error occured
+                </Toast.Body>
+              </Toast>
+            </div>
+          </div>
         </Col>
-        <Col />
+      </Row>
+      <Row>
+        <Col>
+          <Login onLogin={onLogin}/>
+        </Col>
       </Row>
     </Container>
   )
