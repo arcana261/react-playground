@@ -1,0 +1,7 @@
+.header * {
+  color: white;
+}
+
+.header .calendar {
+  margin-left: 10px;
+}

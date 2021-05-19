@@ -1,0 +1,9 @@
+img.catTileSelected {
+  background-color: gray;
+}
+
+img.catTile {
+  border-radius: 25px;
+  margin: 2px;
+  cursor: pointer;
+}
