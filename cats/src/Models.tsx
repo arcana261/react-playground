@@ -1,5 +1,5 @@
 export interface Cat {
-  id: number
+  id: string
   stripes: number
   color: string
   shape: string

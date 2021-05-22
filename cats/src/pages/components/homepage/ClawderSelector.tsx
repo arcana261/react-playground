@@ -121,8 +121,6 @@ function ClawderSelector(props: Props) {
     setCats(newCats)
   }
 
-
-
   return (
     <Spin spinning={isLoading}>
       <CatTable cats={cats} tileWidth={128} tileHeight={256} columns={4} onClick={onCatClick}/>

@@ -25,7 +25,8 @@ function CatTile(props: Props) {
       height={props.height || 256}
       className={props.cat.selected ? 'catTile catTileSelected' : 'catTile'}
       onClick={onClick}
-      alt='cat'/>
+      alt={`${props.cat.id}${props.cat.selected ? 'Selected' : ''}`}/>
+
   )
 }
 

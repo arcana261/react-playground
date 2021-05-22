@@ -7,7 +7,7 @@ function Calendar(props: Props) {
   const msg = today.toString()
 
   return (
-    <strong className='calendar'>{msg}</strong>
+    <strong data-testid="calendar" className='calendar'>{msg}</strong>
   )
 }
 
