@@ -1,6 +1,11 @@
+import { Provider } from 'react-redux'
+import store from './redux/store'
+
 function App() {
   return (
-    <p>Hello, from React!</p>
+    <Provider store={store}>
+      <p>Hello, from React!</p>
+    </Provider>
   );
 }
 

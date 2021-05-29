@@ -1,0 +1,5 @@
+const ACTION_TYPES = {
+  INITIALIZE_APP: 'INITIALIZE_APP'
+}
+
+export default ACTION_TYPES
